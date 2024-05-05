@@ -1,33 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* globals.css */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "Inter", sans-serif; /* Asegúrate de que la fuente Inter se carga correctamente */
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4; /* Color de fondo suave */
+  color: #333; /* Color de texto principal */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header {
+  background: #fff; /* Fondo del encabezado */
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none; /* Remover estilos de lista */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Hacer que los elementos de la lista sean flexibles */
+  justify-content: center; /* Centrar los enlaces horizontalmente */
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remover subrayado de enlaces */
+  color: #0070f3; /* Color para enlaces */
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Subrayar enlaces al pasar el ratón */
+}
+
+main {
+  padding: 20px;
+  min-height: 80vh; /* Altura mínima para el contenido principal */
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
